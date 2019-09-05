@@ -15,9 +15,6 @@ docker run -it --rm --network puppetcompose_default --name selectel -p 80:80 pup
 # 4. Run puppet agent inside container
 /opt/puppetlabs/bin/puppet agent -t
 
-# 5. Inspect container
-docker container inspect selectel |grep "IPAddress"
-
-# 6. Get request
+# 5. Get request
 curl `docker container inspect selectel |grep -oE "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[2-9][0-9]?)"`
 
