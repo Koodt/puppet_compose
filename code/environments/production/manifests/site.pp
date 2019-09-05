@@ -15,6 +15,7 @@ node default {
       ensure => running,
   }
 
+  $world = "Selectel"
   file { '/etc/nginx/sites-available/default':
       ensure => file,
       content => template('nginx/default_site.conf'),
