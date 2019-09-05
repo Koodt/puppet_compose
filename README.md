@@ -1,6 +1,8 @@
 # Puppet_compose
 Puppet server at docker compose and puppet agent at ubuntu container
 
+# 0. Clone this repository && cd 
+
 # 1. Up compose
 docker-compose up
 
