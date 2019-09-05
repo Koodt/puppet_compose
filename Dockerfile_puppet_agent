@@ -1,0 +1,12 @@
+FROM ubuntu:18.04
+
+RUN apt-get update && apt-get install -y \
+    wget
+
+RUN wget -P /tmp --no-check-certificate https://apt.puppetlabs.com/puppet6-release-bionic.deb
+RUN dpkg -i /tmp/puppet6-release-bionic.deb
+
+RUN apt-get update && apt-get install -y \
+    puppet-agent
+
+#/opt/puppetlabs/puppet/bin/puppet agent -t
