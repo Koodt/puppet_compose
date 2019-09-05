@@ -15,4 +15,11 @@ node default {
       ensure => running,
   }
 
+  file { '/etc/nginx/sites-available/default':
+      ensure => file,
+      content => template('nginx/default_site.conf'),
+      require => Package['nginx'],
+      notify => Service['nginx'],
+  }
+
 }
