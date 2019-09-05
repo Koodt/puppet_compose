@@ -7,8 +7,7 @@ Puppet server at docker compose and puppet agent at ubuntu container
 docker-compose up
 
 # 2. Build the image 
-cd Dockerfile 
-docker build -f Dockerfile_puppet_agent . -t puppetagent
+cd Dockerfile && docker build -f Dockerfile_puppet_agent . -t puppetagent
 
 # 3. Run the container
 docker run -it --rm --network puppetcompose_default --name selectel -p 80:80 puppetagent bash
