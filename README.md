@@ -16,5 +16,5 @@ docker run -it --rm --network puppetcompose_default --name selectel -p 80:80 pup
 /opt/puppetlabs/bin/puppet agent -t
 
 # 5. Get request
-curl `docker container inspect selectel |grep -oE "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[2-9][0-9]?)"`
+curl \`docker container inspect selectel |grep -oE "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[2-9][0-9]?)"\`
 
