@@ -7,9 +7,9 @@ node default {
       require => Exec['apt-get update'],
   }
 
-  $to_install = [ 'nginx', 'ginx-extras' ]
+  $to_install = [ 'nginx', 'nginx-extras' ]
 
-  package { '$to_install':  }
+  package { $to_install:  }
 
   service { 'nginx':
       ensure => running,
